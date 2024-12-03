@@ -7,9 +7,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket  = "rocketseat-ci-cd-iac"
-    key     = "state/terraform.tfstate"
-    region  = "us-east-2"
+    bucket = "rocketseat-ci-cd-iac"
+    key    = "state/terraform.tfstate"
+    region = "us-east-2"
   }
 }
 
@@ -18,7 +18,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform-state" {
-  bucket        = "rocketseat-ci-cd-iac"
+  bucket = "rocketseat-ci-cd-iac"
 
   force_destroy = true
 
